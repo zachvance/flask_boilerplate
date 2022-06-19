@@ -16,5 +16,4 @@ I really just wanted a clean version of some of the features and pages that I us
 
 ## Todo
 - Clean up the CSS classes.
-- Add backend logic for handling an email signup.
 - Possibly add a settings/user profile management page.
