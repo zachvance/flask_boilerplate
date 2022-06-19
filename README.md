@@ -1,4 +1,7 @@
 # Flask Boilerplate
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+
 A basic flask boilerplate for personal projects.
 
 ## Features
@@ -13,5 +16,4 @@ I really just wanted a clean version of some of the features and pages that I us
 
 ## Todo
 - Clean up the CSS classes.
-- Add backend logic for handling an email signup.
 - Possibly add a settings/user profile management page.
