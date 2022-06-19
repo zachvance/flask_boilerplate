@@ -10,7 +10,7 @@ class User(DB.Model, UserMixin):
     """
 
     __tablename__ = "users"
-    __table_args__ = {'extend_existing': True}
+    __table_args__ = {"extend_existing": True}
 
     user = DB.Column(DB.String(), unique=True)
     hash = DB.Column(DB.String())
@@ -45,5 +45,5 @@ class User(DB.Model, UserMixin):
 
     def get_permissions(self):
         li = self.permissions
-        li = li.strip('[]').split(', ')
+        li = li.strip("[]").split(", ")
         return li

@@ -4,6 +4,10 @@
 
 {% block content %}
 
+{% if error %}
+    <p class=error><strong>Error:</strong> {{ error }} </p>
+{% endif %}
+
 <div class="content_container">
     <div class="login_container comfy rounded white">
         <h3 class="grey">LOGIN</h3>

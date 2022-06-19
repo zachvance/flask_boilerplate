@@ -15,12 +15,12 @@ def get_env_variable(name):
 
 
 # If you are using SQLite:
-DB_URL = 'sqlite:///database.sqlite3'
+DB_URL = "sqlite:///database.sqlite3"
 
 ENGINE = create_engine(DB_URL).raw_connection()
 app = Flask(__name__)
 app.secret_key = "secretkey"
-app.config['SQLALCHEMY_DATABASE_URI'] = DB_URL
+app.config["SQLALCHEMY_DATABASE_URI"] = DB_URL
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 DB = SQLAlchemy(app)
 

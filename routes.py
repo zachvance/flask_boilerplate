@@ -1,4 +1,3 @@
-
 import flask_login
 from flask import flash, redirect, render_template, request, url_for
 from werkzeug.security import check_password_hash
@@ -51,11 +50,12 @@ def login():
     user = User.query.filter_by(email=email).first()
 
     if not user or not check_password_hash(user.hash, password):
-        flash("Please check your login details and try again.")
-        return redirect(url_for("login"))
+        error = "Invalid credentials"
+        return render_template("login.html", error=error)
 
     # If the above check passes, then we know the user has the right credentials
     flask_login.login_user(user)
+    flash("You were successfully logged in.")
     return redirect(url_for("home"))
 
 
