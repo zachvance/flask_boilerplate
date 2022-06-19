@@ -1,4 +1,5 @@
 from flask_login import UserMixin
+from werkzeug.security import generate_password_hash
 
 from connections import DB
 
@@ -34,9 +35,6 @@ class User(DB.Model, UserMixin):
     def is_active(self):
         return True
 
-    def is_authenticated(self):
-        return self.authenticated
-
     def is_anonymous(self):
         return False
 
@@ -47,3 +45,10 @@ class User(DB.Model, UserMixin):
         li = self.permissions
         li = li.strip("[]").split(", ")
         return li
+
+    def set_password(self, password):
+        """ Sets a password for a given user. """
+        _hash = generate_password_hash(password)
+        self.hash = _hash
+        DB.session.commit()
+        return

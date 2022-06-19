@@ -1,4 +1,5 @@
 import flask_login
+from flask_login import current_user
 from flask import flash, redirect, render_template, request, url_for
 from werkzeug.security import check_password_hash
 
@@ -10,6 +11,7 @@ from connections import app, login_manager
 def home():
     return render_template(
         "home.html",
+        authenticated=current_user.is_authenticated
     )
 
 
@@ -17,6 +19,7 @@ def home():
 def blog():
     return render_template(
         "blog.html",
+        authenticated=current_user.is_authenticated
     )
 
 
@@ -24,6 +27,7 @@ def blog():
 def about():
     return render_template(
         "about.html",
+        authenticated=current_user.is_authenticated
     )
 
 
@@ -31,6 +35,7 @@ def about():
 def signup():
     return render_template(
         "signup.html",
+        authenticated=current_user.is_authenticated
     )
 
 
