@@ -10,7 +10,21 @@ from connections import app, login_manager
 @app.route("/")
 def home():
     return render_template(
-        "base.html",
+        "home.html",
+    )
+
+
+@app.route("/blog")
+def blog():
+    return render_template(
+        "blog.html",
+    )
+
+
+@app.route("/about")
+def about():
+    return render_template(
+        "about.html",
     )
 
 
@@ -23,7 +37,7 @@ def load_user(user):
 @app.route("/login", methods=["GET", "POST"])
 def login():
     if request.method == "GET":
-        return render_template("index.html", login=True)
+        return render_template("login.html", login=True)
 
     email = request.form["email"]
     password = request.form["password"]
