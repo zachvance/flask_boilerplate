@@ -10,13 +10,8 @@ from connections import app, login_manager
 @app.route("/")
 def home():
     return render_template(
-        "index.html",
+        "base.html",
     )
-
-
-@app.route("/data_tables")
-def data_tables():
-    return render_template("data_tables.html")
 
 
 # Authentication handling
