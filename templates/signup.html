@@ -1,20 +1,20 @@
 {% extends 'base.html' %}
 
-{% block title %}Login{% endblock %}
+{% block title %}Signup{% endblock %}
 
 {% block content %}
 
 <div class="content_container">
     <div class="login_container comfy rounded white">
-        <h3 class="grey">LOGIN</h3>
+        <h3 class="grey">SIGNUP</h3>
         <form action='login' method='POST'>
             <input class="login_inputs font_16 block almost_full_width field_height spacing padding rounded minimal_border" type='text' name='email' id='email' placeholder='Email'/>
             <input class="login_inputs font_16 block almost_full_width field_height spacing padding rounded minimal_border" type='password' name='password' id='password' placeholder='Password'/>
-            <input class="block font_16 full_width field_height spacing padding rounded login no_border" type="submit" value="Login">
+            <input class="block font_16 full_width field_height spacing padding rounded login no_border" type="submit" value="Submit">
             <div style="width: 100%; height: 12px; border-bottom: 1px solid grey; text-align: center">
                 <span class="rounded" style="background-color: white; border: 1px solid grey; padding: 5px; font-size: 12px;">OR</span>
             </div>
-            <p class="font_16" style="padding-top: 18px;">Need an account? <a href="{{ url_for('signup') }}">Sign up.</a></p>
+            <p class="font_16" style="padding-top: 18px;">Have an account? <a href="{{ url_for('login') }}">Sign in.</a></p>
         </form>
     </div>
 </div>

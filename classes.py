@@ -40,6 +40,9 @@ class User(DB.Model, UserMixin):
     def is_anonymous(self):
         return False
 
+    def get_id(self):
+        return self.user_id
+
     def get_permissions(self):
         li = self.permissions
         li = li.strip('[]').split(', ')

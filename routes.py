@@ -28,6 +28,13 @@ def about():
     )
 
 
+@app.route("/signup")
+def signup():
+    return render_template(
+        "signup.html",
+    )
+
+
 # Authentication handling
 @login_manager.user_loader
 def load_user(user):
@@ -41,7 +48,7 @@ def login():
 
     email = request.form["email"]
     password = request.form["password"]
-    user = User.query.filter_by(user=email).first()
+    user = User.query.filter_by(email=email).first()
 
     if not user or not check_password_hash(user.hash, password):
         flash("Please check your login details and try again.")
