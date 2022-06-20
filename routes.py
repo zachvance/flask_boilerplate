@@ -7,11 +7,20 @@ from classes import User
 from connections import app, login_manager
 
 
+def try_permissions() -> list:
+    """ If the user is authenticated, returns a list of permissions. Otherwise, returns an empty list. """
+    try:
+        return current_user.get_permissions()
+    except AttributeError:
+        return []
+
+
 @app.route("/")
 def home():
     return render_template(
         "home.html",
-        authenticated=current_user.is_authenticated
+        authenticated=current_user.is_authenticated,
+        roles=try_permissions()
     )
 
 
@@ -19,7 +28,8 @@ def home():
 def blog():
     return render_template(
         "blog.html",
-        authenticated=current_user.is_authenticated
+        authenticated=current_user.is_authenticated,
+        roles=try_permissions()
     )
 
 
@@ -27,7 +37,8 @@ def blog():
 def about():
     return render_template(
         "about.html",
-        authenticated=current_user.is_authenticated
+        authenticated=current_user.is_authenticated,
+        roles=try_permissions()
     )
 
 
@@ -35,7 +46,28 @@ def about():
 def signup():
     return render_template(
         "signup.html",
-        authenticated=current_user.is_authenticated
+        authenticated=current_user.is_authenticated,
+        roles=try_permissions()
+    )
+
+
+@app.route("/protected")
+@flask_login.login_required
+def protected():
+    return render_template(
+        "protected.html",
+        authenticated=current_user.is_authenticated,
+        roles=try_permissions()
+    )
+
+
+@app.route("/admin")
+@flask_login.login_required
+def admin():
+    return render_template(
+        "admin.html",
+        authenticated=current_user.is_authenticated,
+        roles=try_permissions()
     )
 
 

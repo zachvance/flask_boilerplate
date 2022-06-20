@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block title %}Protected{% endblock %}
+
+{% block content %}
+    {% include 'menu.html' %}
+    <div class="login_container comfy rounded white">
+        This is the protected page. You must be logged in to view it.
+    </div>
+{% endblock %}

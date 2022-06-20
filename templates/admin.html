@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block title %}Admin{% endblock %}
+
+{% block content %}
+    {% include 'menu.html' %}
+    <div class="login_container comfy rounded white">
+        This is the admin page. You must be logged in and have 'admin' in your user permissions to view it.
+    </div>
+{% endblock %}

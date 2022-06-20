@@ -4,9 +4,18 @@
         <div class="words" style="padding: 10px;"><a href="{{ url_for('home') }}">Home</a></div>
         <div class="words" style="padding: 10px;"><a href="{{ url_for('blog') }}">Blog</a></div>
         <div class="words" style="padding: 10px;"><a href="{{ url_for('about') }}">About</a></div>
+        {% if authenticated %}
+            <div class="words" style="padding: 10px;"><a href="{{ url_for('protected') }}">Protected</a></div>
+            {% if 'admin' in roles %}
+                <div class="words" style="padding: 10px;"><a href="{{ url_for('admin') }}">Admin</a></div>
+            {% endif %}
+        {% endif %}
+
     </div>
+
     <div class="right" style="text-align: right; display: flex; float: right;">
         {% if authenticated %}
+            <div class="words" style="display: inline-block; padding: 10px; text-align: right;"><a href='/logout'>Settings</a></div>
             <div class="words" style="display: inline-block; padding: 10px; text-align: right;"><a href='/logout'>Logout</a></div>
         {% else %}
             <div class="words" style="display: inline-block; padding: 10px; text-align: right;"><a href='/login'>Login</a></div>

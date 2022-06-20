@@ -29,4 +29,4 @@ def query_test():
         print(user.user, user.get_permissions(), user.hash)
 
     user = User.query.filter(User.email == "user1@example.com").first()
-    user.set_password("pw")
+    user.set_password("user1")
