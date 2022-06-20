@@ -13,6 +13,11 @@ A basic flask boilerplate for personal projects.
 - A basic SQLite database with a 'users' table.
 - A 'User' class that utilizes the database info via SQLAlchemy.
 
+## Images
+
+<img src="https://github.com/zachvance/flask_boilerplate/blob/main/images/login_page.png" alt="Login Page" width="400"/><img src="https://github.com/zachvance/flask_boilerplate/blob/main/images/home_page.png" alt="Home Page" width="400"/>
+
+
 ## Background
 I really just wanted a clean version of some of the features and pages that I use frequently for apps, and the CSS already mostly taken care of.
 
