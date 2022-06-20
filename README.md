@@ -15,7 +15,9 @@ A basic flask boilerplate for personal projects.
 
 ## Images
 
-<img src="https://github.com/zachvance/flask_boilerplate/blob/main/images/login_page.png" alt="Login Page" width="500"/> <img src="https://github.com/zachvance/flask_boilerplate/blob/main/images/home_page.png" alt="Home Page" width="500"/>
+<img src="https://github.com/zachvance/flask_boilerplate/blob/main/images/login_page.png" alt="Login Page" width="1000"/>
+
+<img src="https://github.com/zachvance/flask_boilerplate/blob/main/images/home_page.png" alt="Home Page" width="1000"/>
 
 
 ## Background
