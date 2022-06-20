@@ -6,6 +6,8 @@ A basic flask boilerplate for personal projects.
 
 ## Features
 - Premade templates and routing for Home, Blog, About, Signup, Login and Logout pages.
+- A Protected page (must be logged in to view).
+- An Admin page (must be both logged in and have 'admin' in permissions to view).
 - CSS styling for all of the above included.
 - Preset connection to a database - either Postgres or SQLite, with SQLite being the default. This can be changed in the 'connections.py' file.
 - A basic SQLite database with a 'users' table.
@@ -13,6 +15,12 @@ A basic flask boilerplate for personal projects.
 
 ## Background
 I really just wanted a clean version of some of the features and pages that I use frequently for apps, and the CSS already mostly taken care of.
+
+## Usage
+### Default logins
+
+The default logins that come contained within the 'database.sqlite3' file are 'user1@example.com' and 'admin@example.com'.
+The passwords for these logins are 'user1' and 'admin', respectively.
 
 ## Todo
 - Clean up the CSS classes.
