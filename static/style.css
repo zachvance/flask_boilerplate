@@ -60,7 +60,7 @@ body {
 /* Menu styling */
 .navbar {background-color: white; margin: auto; height: 40px;}
 
-.words {font-family: sans-serif; font-size: 18px; text-decoration: none; text-align: left; display: inline;}
+.menu_item {font-family: sans-serif; font-size: 18px; text-decoration: none; text-align: left; display: inline;}
 
 a {color: RoyalBlue;}
 a:visited {color: RoyalBlue;}
