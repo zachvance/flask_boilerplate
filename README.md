@@ -21,7 +21,9 @@ A basic flask boilerplate for personal projects.
 
 
 ## Background
-I really just wanted a clean version of some of the features and pages that I use frequently for apps, and the CSS already mostly taken care of.
+I wanted my own boilerplate for some of the aspects/features I find myself setting up most frequently on small scale web apps. This gives me a clean template to work off that could be modified and ready to demo relatively quickly, along with a local database for testing and styling already taken care of.
+
+Additionally, it's been a good exercise in organization; sometimes taking a step back and working on a smaller scale project allows you to structure things differently and improve your fundamentals, which can be applied to larger undertakings.
 
 ## Usage
 ### Default logins
