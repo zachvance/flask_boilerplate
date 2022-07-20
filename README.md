@@ -1,3 +1,5 @@
+<img src="https://github.com/zachvance/flask_boilerplate/blob/main/images/banner.png" alt="Banner" width="1000"/>
+
 # Flask Boilerplate
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
